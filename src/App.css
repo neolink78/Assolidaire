@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+}
+
+.allbg {
+    height: 85vh;
+    padding: 20%;
+}
+
+.everything {
+background-image: linear-gradient( #fff, #23844f 48%, #fff);}
+/* HOME PAGE*/
+.main-logo {
+    display: flex;
+    width: 200px;
+    padding: 2%;
+}
+
+.navbar_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.title {
+    display: flex;
+    padding: 40px 20px;
+    font-size: 3rem;
+}
+
+li {
+    list-style-type: none;
+    padding: 0px 20px 20px 0px;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menuBurger {
+    display: none;
+}
+
+.allNavbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 15vh;
+
+}
+
+nav {
+    display: flex;
+}
+
+.titleAndList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.randomizer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 10px;
+}
+
+.insideCarousel {
+    height: 160px;
+        color: #fff;
+        line-height: 160px;
+        text-align: center;
+        background-color: #364d79;
+}
+
+.randomizer-pictures {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+
+}
+.pictureSize {
+    width: 400px;
+    height: 400px;
+}
+
+/* PAGE CATEGORIES*/
+.pictureSizeCategories {
+    width: 200px;
+    height: 200px;
+}
+
+.boxCategory {
+   
+}
+
+.allSingleCat {
+
+}
+
+.backArrow {
+    display: flex;
+    justify-content: center;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+}
+
+.popup-inner .close-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+.categories {
+    display: grid;
+
+    grid-template-columns: 25px 25px;
+    grid-template-rows: 25px 25px;
+    gap: 300px;
+    justify-content: center;
+
+}
+/* PAGE ABOUT*/
+
+section {
+    padding: 100px 20%;
+}
+section h1 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+section p {
+   padding-bottom: 20px;
+}
+/* PAGE ACCOUNT*/
+.App {
+    text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.auth-form-container, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+.auth-form-container {
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+
+  .auth-form-container label {
+    text-align: left;
+    padding: 0.25rem 0;
+  }
+  .auth-form-container input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+  }
+  .auth-form-container button {
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #7439db;
+  }
+  
+  .auth-form-container .link-btn {
+    background: none;
+    color: white;
+    text-decoration: underline;
+  }
+
+/* PAGE PARTNER */
+
+.Partner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.allPartners {
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+}
+
+
+
+/* max width à mettre en 360px*/
+@media screen and (max-width: 450px) {
+    .main-logo {
+        display: flex;
+        width: 50px;
+        padding: 2%;
+    }
+
+    .navbar_links_open  {
+        display: inline;
+    }
+
+    .navbar_links_closed {
+        display: none;
+    }
+
+    .navbar_links {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       right: 0;
+       top: 100px;
+       background-color: blue;
+       position: absolute;
+       z-index: 9999;
+    }
+
+    .menuBurger {
+        display: block;
+    }
+
+    .navbar {
+        display: flex;
+        width: 100%;
+    }
+
+    .allNavbar {
+        width: 100%;
+        background-color: aqua;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        display: flex;
+        position: relative;
+    }
+
+    .titleAndList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .pictureSize {
+        width: 40px;
+        height: 40px;
+    }
+
+    .App {
+        text-align: center;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .auth-form-container, .login-form, .register-form {
+        display: flex;
+        flex-direction: column;
+      }
+}
