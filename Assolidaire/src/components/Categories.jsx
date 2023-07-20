@@ -1,41 +1,29 @@
 import { useNavigate } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import * as Services from "../service/Assos.service";
 export default function Categories() {
-    const allcategories = [
-        {
-        id: 1,
-        name: 'Repas',
-        img: 'src/assets/pauvrete/restos.png',
-        },
-        {
-        id: 2,
-        name: 'Santé',
-        img: 'src/assets/sante/sidaction.png'
-    },{
-        id: 3,
-        name: 'Patrimoine',
-        img: 'src/assets/patrimoine/artFrançais.png'
-    },{
-        id: 4,
-        name: 'Environnement',
-        img: 'src/assets/ecologie/LPO-env.png'
-    }]
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [asso, setAsso] = useState(null);
+  useEffect(() => {
+    Services.getFirstAssoWithItsCat().then((res) => {
+      setAsso(res);
+    });
+  }, []);
 
   return (
     <div className="categories allbg">
-      {allcategories.map((oneCat) => {
-        return(
-      <div  key={oneCat.id}
-      className="boxCategory"
-      onClick={() => navigate(`/categories/${oneCat.id}`)}>
-        <h2>{oneCat.name}</h2>
-        <img
-          className="pictureSizeCategories"
-          src={oneCat.img}
-        />
-      </div>)})}
+      {asso?.map((oneCat, idx) => {
+        return (
+          <div
+            key={oneCat.id}
+            className="boxCategory"
+            onClick={() => navigate(`/categories/${idx + 1}`)}
+          >
+            <h2>{oneCat.category_name}</h2>
+            <img className="pictureSizeCategories" src={oneCat.src} />
+          </div>
+        );
+      })}
     </div>
   );
 }

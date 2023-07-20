@@ -8,7 +8,7 @@ export default function Navbar() {
       <nav>
         <div className="allNavbar">
           <img
-            src="./src/assets/accueil.png"
+            src="../src/assets/accueil.png"
             alt="main logo"
             className="main-logo"
           />
@@ -17,7 +17,7 @@ export default function Navbar() {
             <img
               type="button"
               onClick={() => setMenuBurger(!MenuBurger)}
-              src="./src/assets/burgerMenu.svg"
+              src="../src/assets/burgerMenu.svg"
               alt="menu burger"
               className="menuBurger"
               height="35"

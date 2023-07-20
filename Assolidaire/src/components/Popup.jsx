@@ -1,6 +1,5 @@
-
 /* eslint-disable */
-export default function Popup({ trigger, children, setButton, link }) {
+export default function Popup({ trigger, children, setButton }) {
   return (
     trigger && (
       <div className="popup">
@@ -8,7 +7,7 @@ export default function Popup({ trigger, children, setButton, link }) {
           <button className="close-btn" onClick={() => setButton(false)}>
             close
           </button>
-          
+
           {children}
         </div>
       </div>

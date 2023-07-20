@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "scripts": {
+    "dev": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./Assolidaire run dev\" \"npm --prefix ./backend run dev\""
+  }
+}
