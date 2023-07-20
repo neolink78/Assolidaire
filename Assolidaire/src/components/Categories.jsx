@@ -6,6 +6,7 @@ export default function Categories() {
   const [asso, setAsso] = useState(null);
   useEffect(() => {
     Services.getFirstAssoWithItsCat().then((res) => {
+      console.log(res)
       setAsso(res);
     });
   }, []);
