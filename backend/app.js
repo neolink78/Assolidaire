@@ -14,15 +14,21 @@ app.use(
   })
 );
 const assos = require('./assos');
-
+const admins = require("./admin")
 app.get('/', (req, res) => {
     res.send("Welcome to the assos list");
   });
 
-app.get('/assos', assos.getAssos )
-app.get('/assos/first', assos.getFirstAssoWithItsCat)
-app.get('/assos/:cat_id', assos.getAssosByCategory)
+app.post('/assos/', assos.postAsso);
 
+app.get('/assos', assos.getAssos );
+app.get('/assos/first', assos.getFirstAssoWithItsCat);
+app.get('/assos/:cat_id', assos.getAssosByCategory);
+
+app.delete("/assos/:name", assos.deleteAsso)
+
+
+app.get("/admins", admins.getAdmins)
 
 app.listen(port, (err) => {
     if (err) {

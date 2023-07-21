@@ -6,7 +6,6 @@ export default function Categories() {
   const [asso, setAsso] = useState(null);
   useEffect(() => {
     Services.getFirstAssoWithItsCat().then((res) => {
-      console.log(res)
       setAsso(res);
     });
   }, []);
@@ -20,8 +19,11 @@ export default function Categories() {
             className="boxCategory"
             onClick={() => navigate(`/categories/${idx + 1}`)}
           >
-            <h2>{oneCat.category_name}</h2>
-            <img className="pictureSizeCategories" src={oneCat.src} />
+            <h2 className="name-categorie">{oneCat.category_name}</h2>
+            <img 
+            height="300"
+            width="300"
+            className="pictureSizeCategories" src={oneCat.src} />
           </div>
         );
       })}

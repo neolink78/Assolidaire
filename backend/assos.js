@@ -34,10 +34,38 @@ const getFirstAssoWithItsCat = (req, res) => {
     })
 }
 
+const postAsso = (req, res) => {
+    const {name, src, lien, cat_id} = req.body;
 
+    database.query("insert INTO assos(name, src, lien, cat_id) VALUES (?, ?, ?, ?)",
+    [name, src, lien, cat_id]).then(([result]) => {
+        res.location(`/assos/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+        console.error(err);
+        res.status(500).send('error saving the user')
+    })
+}
+
+
+const deleteAsso = (req, res) => {
+    const name = req.params.name;
+    database.query('DELETE from assos where name = ?', [name])
+    .then(([result]) => {
+        if (result.affectedRows === 0) {
+            res.status(404).send('Not found');
+        }else {res.sendStatus(204);}
+    })
+    .catch((err) => {
+        console.error(err);
+        res.status(500).send('Error deleting the movie');
+    })
+}
 
 module.exports = {
     getAssos,
     getAssosByCategory,
     getFirstAssoWithItsCat,
+    postAsso,
+    deleteAsso,
 }

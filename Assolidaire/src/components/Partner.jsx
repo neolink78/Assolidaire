@@ -27,33 +27,28 @@ export default function Partner () {
 
           return (
             <div className="allPartners">
+              <h2>Afin de devenir partenaire, <br/> veuillez nous envoyer un mail en remplissant les champs ci-dessous</h2>
              <form
              className="Partner"
             ref={form}
             onSubmit={sendEmail}
           >
-            <div>
               <input
                 type="text"
                 placeholder="username"
                 id="text"
                 name="name"
               />
-            </div>
-            <div>
               <input
                 type="email"
                 placeholder="email@example.com"
                 id="email"
                 name="user_email"
               />
-            </div>
-            <div>
               <textarea
                 placeholder="Type your text here"
                 name="message"
               />
-            </div>
             <input
               type="submit"
               value="Send"
