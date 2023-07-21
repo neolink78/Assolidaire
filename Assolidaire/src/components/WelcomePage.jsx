@@ -25,15 +25,15 @@ export default function WelcomePage() {
   }
   return (
     <div className="allbg">
-      <Carousel className="carousel">
+      <Carousel  className="carousel">
         <div>
-          <h3 className="insideCarousel">bouffe</h3>
+          <img className="insideCarousel" src="../src/assets/Carousel/carousel1.PNG"/>
         </div>
         <div>
-          <h3 className="insideCarousel">santé</h3>
+        <img className="insideCarousel" src="../src/assets/Carousel/carousel2.PNG"/>
         </div>
         <div>
-          <h3 className="insideCarousel">patrimoine</h3>
+        <img className="insideCarousel" src="../src/assets/Carousel/carousel3.PNG"/>
         </div>
       </Carousel>
       <div className="randomizer-text">
@@ -44,13 +44,13 @@ export default function WelcomePage() {
         </h3>
       </div>
       <div className="randomizer-pictures">
-        <button onClick={() => 
+        <button className="button-don" onClick={() => 
          setStop(Math.floor(Math.random() * data.length))}>Je donne !</button>
          <img
          className="pictureSize"
          src={`${stop ? data[stop]?.src : data[random]?.src}`} 
          alt={`${stop ? data[stop]?.name : data[random]?.name}`}></img>;
-         </div>
+      </div>
          {stop && <Popup trigger={Boolean(stop)} setButton={setStop}>
           <h3>Vous allez être redirigé vers le site de {data[stop].name}</h3>
           {

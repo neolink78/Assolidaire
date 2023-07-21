@@ -8,11 +8,12 @@
 
 .allbg {
     height: 85vh;
-    padding: 20%;
+    /* padding: 20%; */
 }
 
 .everything {
-background-image: linear-gradient( #fff, #23844f 48%, #fff);}
+background-color: gray;
+}
 /* HOME PAGE*/
 .main-logo {
     display: flex;
@@ -23,21 +24,26 @@ background-image: linear-gradient( #fff, #23844f 48%, #fff);}
 .navbar_links {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    /* justify-content: center; */
 }
 
 .title {
     display: flex;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
     font-size: 3rem;
 }
 
 li {
     list-style-type: none;
-    padding: 0px 20px 20px 0px;
+    padding: 30px 20px;
     font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    color: white;
 }
+
+li:hover {
+    transform: scale(1.2);
+  }
 
 a {
     text-decoration: none;
@@ -52,11 +58,12 @@ a {
     width: 100%;
     align-items: center;
     height: 15vh;
-
 }
 
 nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .titleAndList {
@@ -70,12 +77,23 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding: 50px 0;
     gap: 10px;
 }
 
+.button-don {
+    margin: 30px 0 60px 0;
+    padding: 10px 30px;
+}
+
+.carousel {
+    left: 30%;
+    width: 50%;
+}
+
 .insideCarousel {
-    height: 160px;
+    display: flex;
+    height: 350px;
         color: #fff;
         line-height: 160px;
         text-align: center;
@@ -95,13 +113,12 @@ nav {
 }
 
 /* PAGE CATEGORIES*/
-.pictureSizeCategories {
-    width: 200px;
-    height: 200px;
-}
+
 
 .boxCategory {
-   
+   display: flex;
+   flex-direction: column;
+
 }
 
 .allSingleCat {
@@ -109,8 +126,11 @@ nav {
 }
 
 .backArrow {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* text-align: center; */
+    /* left: 50px; */
+    /* width: 100%; */
+    margin: 0 0 0 700px;
 }
 
 .popup {
@@ -141,14 +161,38 @@ nav {
 }
 .categories {
     display: grid;
-
-    grid-template-columns: 25px 25px;
-    grid-template-rows: 25px 25px;
-    gap: 300px;
-    justify-content: center;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    padding: 0 600px;
 }
+.name-categorie {
+    font-size: 35px;
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+}
+
 /* PAGE ABOUT*/
+
+.about-section {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section p,  .about-section h1{
+color: #fff;
+}
+
+.about-section h1 {
+    font-size: 35px;
+    margin: 80px 0;
+}
+
+.about-section p {
+    font-size: 20px;
+}
 
 section {
     padding: 100px 20%;
@@ -164,7 +208,7 @@ section p {
 .App {
     text-align: center;
   display: flex;
-  min-height: 100vh;
+  min-height: 85vh;
   align-items: center;
   justify-content: center;
   color: white;
@@ -187,18 +231,24 @@ section p {
     padding: 0.25rem 0;
   }
   .auth-form-container input {
-    margin: 0.5rem 0;
-    padding: 1rem;
+    margin: 10px 0;
+    padding: 10px;
     border: none;
     border-radius: 10px;
   }
   .auth-form-container button {
     border: none;
     background-color: white;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     color: #7439db;
+    margin: 20px 0;
+  }
+
+  .login {
+    margin: 0 0 40px ;
+    font-size: 30px;
   }
   
   .auth-form-container .link-btn {
@@ -206,6 +256,15 @@ section p {
     color: white;
     text-decoration: underline;
   }
+
+.user-section {
+    height: 85vh;
+}
+
+.login-form h2{
+    margin: 0 0 40px 0;
+    text-align: center;
+}
 
 /* PAGE PARTNER */
 
@@ -217,13 +276,31 @@ section p {
     gap: 10px;
 }
 
+.Partner input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 12px;
+}
+
+.Partner textarea {
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+
+
 .allPartners {
     display: flex;
     justify-content: center;
     height: 85vh;
+    flex-direction: column;
 }
 
-
+.allPartners h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+    font-size: 20px;
+}
 
 /* max width à mettre en 360px*/
 @media screen and (max-width: 450px) {

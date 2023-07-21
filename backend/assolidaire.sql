@@ -8,16 +8,16 @@ CREATE TABLE categories (
 INSERT INTO categories (name)
 VALUES
  (
-    'ecologie'
+    'Ecologie'
  ),
  (
-    'patrimoine'
+    'Patrimoine'
  ),
  (
-    'pauvrete'
+    'Pauvreté'
  ),
  (
-    'sante'
+    'Santé'
  );
 
  DROP TABLE IF EXISTS assos;
@@ -95,7 +95,7 @@ VALUES
     4
  ),
  (
-    'Médecins snas frontières',
+    'Médecins sans frontières',
     'src/assets/sante/médecins.png',
     'https://soutenir.msf.fr/faire-un-don/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyPwETAZH%2BfJoZzZSLb0kPOpP5Y9vp3n4apjYFfuy8Grlj9hP3a72xFPt6G2Q3hoScwQKG%2B1BzqwWq8TXE24LU7dC7AFTc%2FWE6vWDKhiFHvwxh8Mt4ZA4ZCWtNQNWyfuSaKbg%2FQaxF7h4lw5%2BKcOxsVNrlwfjElQL3pvFcfqXfY%2B5IufZYera6AxZhbqhuYtCgNyzVn2fMlPgYt8W6CMBbybu10uY4rIW6IjN5%2FWj%2FgpuXjB4afGyKPJtFtK0fLRX%2F8pRRd9dTkYgUAU4EumWP6prOijQwBlI8mFry5WUsKLI2ig33CMA1LjdlJgkkqVNbMwONoxB8Nf0yd88fkkhhoLyzhfhI5nYPOjYrI%2FHDEFlLozWzmZhOPUEdrQAFoFSj8vFjvltlk3gLvDoPFZzhU2Nqn3VTYe%2BsWeM0MoIktFXw%3D%3D&esv_source=Google&esv_medium=SEA_Brand&esv_campaign=W%2A%2AW00001&esv_term=medecins+sans+frontiere&gad=1&gclid=CjwKCAjwtuOlBhBREiwA7agf1krxQIWWljqqnMSsGFGDbpED8hA6f14KNrTwXwmN6ApC3Wyfi8vNHRoCMBsQAvD_BwE&_cv=1',
     4
@@ -117,5 +117,13 @@ VALUES
 
  CREATE TABLE admins (
     id int primary key NOT NULL AUTO_INCREMENT,
-    mail varchar(255) NOT NULL
+    mail varchar(255) NOT NULL,
+    password varchar(255) NOT NULL
  ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+ INSERT INTO admins (mail, password)
+VALUES
+ (
+    'thibaut.resse@outlook.fr',
+    'Bienessayé!'
+ );

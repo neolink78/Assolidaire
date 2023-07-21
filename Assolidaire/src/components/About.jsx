@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section>
+        <section className="about-section">
         <h1 className="about">Unir les forces humanitaires pour un monde meilleur</h1>
         <p>
         Notre site est bien plus qu'une simple plateforme en ligne. C'est un espace dédié à l'humanité, à la compassion et à la volonté de faire une différence dans la vie des autres. Nous croyons en la puissance des actions collectives pour apporter des changements significatifs dans le monde, et c'est pourquoi nous avons créé cet espace unique où nous mettons en lumière différentes associations humanitaires.

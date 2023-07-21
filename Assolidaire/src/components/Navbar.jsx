@@ -6,12 +6,12 @@ export default function Navbar() {
   return (
     <header>
       <nav>
-        <div className="allNavbar">
           <img
             src="../src/assets/accueil.png"
             alt="main logo"
             className="main-logo"
           />
+        <div className="allNavbar">
           <div className="titleAndList">
             <h1 className="title">Bienvenue sur Assolidaire !</h1>
             <img
