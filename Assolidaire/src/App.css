@@ -7,7 +7,7 @@
 }
 
 .allbg {
-    height: 85vh;
+    height: 90vh;
     /* padding: 20%; */
 }
 
@@ -23,7 +23,6 @@ background-color: gray;
 
 .navbar_links {
     display: flex;
-    align-items: center;
     /* justify-content: center; */
 }
 
@@ -70,7 +69,10 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    
+    left: 40%;
+    position: absolute;
+
 }
 
 .randomizer-text {
@@ -87,13 +89,14 @@ nav {
 }
 
 .carousel {
-    left: 30%;
+    left: 25%;
     width: 50%;
 }
 
 .insideCarousel {
     display: flex;
     height: 350px;
+    width: 100%;
         color: #fff;
         line-height: 160px;
         text-align: center;

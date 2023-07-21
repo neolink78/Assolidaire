@@ -25,7 +25,7 @@ export default function WelcomePage() {
   }
   return (
     <div className="allbg">
-      <Carousel  className="carousel">
+      <Carousel  autoplay className="carousel">
         <div>
           <img className="insideCarousel" src="../src/assets/Carousel/carousel1.PNG"/>
         </div>
